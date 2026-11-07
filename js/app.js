@@ -124,3 +124,95 @@
 //     submitedName.innerText = "My Name is - " + txtName.value;
 
 // }
+
+// function btnAddOnAction() {
+//     let inputnum1 =document.getElementById("txtNum1").value;
+//     let inputnum2 =document.getElementById("txtNum2").value;
+
+//     let result = parseInt(inputnum1) + parseInt(inputnum2);
+//     outPut.innerText = "Result is - " + result;
+
+
+// }
+
+// function btnSubtractOnAction() {
+//    let inputnum1 =document.getElementById("txtNum1").value;
+//     let inputnum2 =document.getElementById("txtNum2").value;
+
+//     let result = parseInt(inputnum1) - parseInt(inputnum2);
+//     outPut.innerText = "Result is - " + result;
+
+
+// }
+
+
+
+
+// -----------------------------------Customer Form Appp---------------------------------
+
+
+let customerList = [];
+function btnSubmitOnAction() {
+
+    let txtName = document.getElementById("txtName").value;
+    let txtAddress = document.getElementById("txtAddress").value;
+    let txtAge = document.getElementById("txtAge").value;
+    let txtEmail = document.getElementById("txtEmail").value;
+    let txtSalary = document.getElementById("txtSalary").value;
+
+   let customer = {
+         name:txtName,
+         address:txtAddress,
+         age:txtAge,
+         email:txtEmail,
+         salary:txtSalary
+   }
+   console.log(customer);
+   customerList.push(customer);
+   console.log(customerList);
+   btnLoadTableOnAction();
+   resetInputFields();
+}
+// function btnLoadTableOnAction(){
+//    let tblCustomer = document.getElementById("tblCustomer");
+
+//    tblCustomer.innerHTML += `
+//         <tr>
+//             <td>Saman</td>
+//             <td>Colombo</td>
+//             <td>25</td>
+//             <td>saman@example.com</td>
+//             <td>50000</td>
+//         </tr>
+//    `
+// }
+
+
+function btnLoadTableOnAction() {
+     let tblCustomer = document.getElementById("tblCustomer");
+
+     let body = "";
+
+     for (let i = 0; i < customerList.length; i++) {
+            body += `
+        <tr>
+            <td>${customerList[i].name}</td>
+            <td>${customerList[i].address}</td>
+            <td>${customerList[i].age}</td>
+            <td>${customerList[i].email}</td>
+            <td>${customerList[i].salary}</td>
+         </tr>
+       `
+     }
+     tblCustomer.innerHTML = body;
+
+
+}
+
+function resetInputFields() {
+    document.getElementById("txtName").value = "";
+    document.getElementById("txtAddress").value = "";
+    document.getElementById("txtAge").value = "";
+    document.getElementById("txtEmail").value = "";
+    document.getElementById("txtSalary").value = "";
+}
