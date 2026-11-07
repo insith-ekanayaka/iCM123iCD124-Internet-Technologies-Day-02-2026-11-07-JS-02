@@ -90,7 +90,37 @@
 2.1
 // -----------------------------------(DOM - Document Object Model)-----------------------------------
 
-console.log(document);
+// console.log(document);
 
-document.write("<h1>Hello, World!</h1>");
-document.write("<h2>Hello, World!</h2>");
+// document.write("<h1>Hello World</h1>");
+// document.write("<h2>Hello World</h2>");
+
+
+
+// let number = 0;
+// function btnClickMeOnAction(){
+
+//     title.innerText = "Saman Kumara - " + number++;
+// }
+
+// -- Number Count APP -- 
+
+// let number = 0;
+// function btnIncrementOnAction(){
+//   number++;
+//   numberCount.innerText = "Number Count - " +number;
+// }
+
+// function btnDecrementOnAction(){
+//    number--;
+//    numberCount.innerText = "Number Count - " +number;
+
+// }
+
+
+// function btnResetOnAction(){
+//     let txtName = document.getElementById("txtName");
+//     console.log(txtName.value);
+//     submitedName.innerText = "My Name is - " + txtName.value;
+
+// }
